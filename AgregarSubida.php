@@ -6,7 +6,7 @@ if (mysqli_connect_errno()) {
 $string = file_get_contents('php://input'); 
 $objeto = json_decode($string, true);
 
-$query = "INSERT INTO Subidas (LatLong,IdLinea,Horasubida,Calle) VALUES (?, ? , ?, ?)";
+$query = "INSERT INTO subidas (LatLong,IdLinea,Horasubida,Calle) VALUES (?, ? , ?, ?)";
 $stmt = $con->prepare($query);
 $stmt->bind_param(
 	'ssss',
@@ -19,7 +19,7 @@ $stmt->bind_param(
 $stmt->execute();
 
 
-$query2 = "SELECT MAX(IdSubida) AS ultimo FROM Subidas";
+$query2 = "SELECT MAX(IdSubida) AS ultimo FROM subidas";
 $result = mysqli_query($con, $query2);
 $objetos = array();
 while($row = mysqli_fetch_array($result)) 

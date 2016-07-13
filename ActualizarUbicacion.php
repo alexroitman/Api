@@ -10,7 +10,7 @@ $IdSubida=$objeto["IdSubida"];
 $Hora=$objeto["Hora"];
 $Calle=$objeto["Calle"];
 
-$query ="UPDATE Subidas SET UltimaUbicacion='$UltimaUbicacion',Horasubida='$Hora',Calle='$Calle' WHERE IdSubida='$IdSubida'";
+$query ="UPDATE subidas SET UltimaUbicacion='$UltimaUbicacion',Horasubida='$Hora',Calle='$Calle' WHERE IdSubida='$IdSubida'";
 
 //$result = mysqli_query($con, $query);
 $stmt = $con->prepare($query);

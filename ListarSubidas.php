@@ -4,7 +4,7 @@ if (mysqli_connect_errno()) {
    echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 $id=$_GET["IdLinea"];
-$query ="SELECT * FROM Subidas WHERE IdLinea='$id' ORDER BY IdSubida DESC";
+$query ="SELECT * FROM subidas WHERE IdLinea='$id' ORDER BY IdSubida DESC";
 
 $objetos = array();
 $result = mysqli_query($con, $query);

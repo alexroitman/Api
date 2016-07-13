@@ -5,7 +5,7 @@ if (mysqli_connect_errno()) {
 }
 $Sub=$_GET["Sub"];
 
-$query = "DELETE FROM `Subidas` WHERE IdSubida='$Sub'";
+$query = "DELETE FROM `subidas` WHERE IdSubida='$Sub'";
 $stmt = $con->prepare($query);
 $stmt->execute();
 mysqli_close($con);
