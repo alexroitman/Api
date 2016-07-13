@@ -1,5 +1,6 @@
 <?php
-$con=mysqli_connect("localhost","u241352082_alexr","123456","u241352082_bdfin");
+$con=mysqli_connect("us-cdbr-azure-central-a.cloudapp.net","b0f137b65248c5","b0f137b65248c5","u241352082_bdfin");
+// $con=mysqli_connect("localhost","u241352082_alexr","123456","u241352082_bdfin");
 if (mysqli_connect_errno()) {
    echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
